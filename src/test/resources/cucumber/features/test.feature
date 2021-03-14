@@ -1,7 +1,7 @@
 Feature: BuyOrder
 
   Scenario: Trader place an order
-    Given barabrbarbar
+    Given barabrbarbardd
 
     When barabrbarbar
 
