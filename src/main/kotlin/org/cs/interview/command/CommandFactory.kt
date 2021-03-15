@@ -5,6 +5,11 @@ import org.cs.interview.drawing.DrawingPanel
 
 class CommandFactory(private val drawingPanel: DrawingPanel) {
 
+    sealed class CommandResult {
+        data class Success(val command: Command): CommandResult()
+        data class InvalidCommand(val message: String): CommandResult()
+    }
+
     fun createCommand(command: String): Command {
         val tokens = command.split(" ").filter { it.isNotBlank() }
         val commandType = tokens[0]
